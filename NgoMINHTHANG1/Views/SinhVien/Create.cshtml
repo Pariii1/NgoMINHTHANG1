@@ -1,0 +1,40 @@
+﻿@model NgoMINHTHANG1.Models.SinhVien
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Thêm Sinh Viên</h2>
+
+@using (Html.BeginForm("Create", "SinhVien", FormMethod.Post))
+{
+    <div class="form-group">
+        <label for="name">MaSV</label>
+        @Html.TextBoxFor(m => m.MaSV, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        <label for="name">HoTen</label>
+        @Html.TextBoxFor(m => m.HoTen, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        <label for="name">GioiTinh</label>
+        @Html.TextBoxFor(m => m.GioiTinh, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label for="name">NgaySinh</label>
+        @Html.TextBoxFor(m => m.NgaySinh, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label for="name">Hình ảnh</label>
+        @Html.TextBoxFor(m => m.Hinh, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label for="name">MaNganh</label>
+        @Html.TextBoxFor(m => m.MaNganh, new { @class = "form-control" })
+    </div>
+    <a href="@Url.Action("Index", "SinhVien")" class="btn btn-primary"><i class="fa-solid fa-backward"></i> Trở về</a>
+    <button type="submit" class="btn btn-success"><i class="fa-solid fa-plus"></i> Thêm</button>
+}
+
